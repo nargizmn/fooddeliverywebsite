@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="./assets/css/style.compressed.css">
+    <title>FooYes - Delivery or Takeaway Food</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="transparent-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.svg" alt="FooYes header logo">
+                    </a>
+                    <i class="close-mobile-menu fas fa-times"></i>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html">Home</a></li>
+                    <li class="list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" class="default-logo" alt="FooYes header logo">
+                    <img src="./assets/images/logo_sticky.svg" class="colored-logo" alt="FooYes header colorful logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="list-group flex-row align-items-center">
+                    <li class="nav-link list-group-item"><a href="index.html">Home</a></li>
+                    <li class="nav-link list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="nav-link list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="nav-link list-group-item"><a href="contact.html">Contact</a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/login.svg" class="default-icon" alt="sign in icon">
+                        <img src="./assets/images/login_black.svg" class="colored-icon" alt="sign in icon">
+                    </a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/passion.svg" class="default-icon" alt="favourites icon">
+                        <img src="./assets/images/passion_black.svg" class="colored-icon" alt="favourites icon">
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <div class="hero-section d-flex flex-column justify-content-center" style="background-image: url(./assets/images/home_section_2.jpg);">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <h1>Delivery or Takeaway Food</h1>
+                        <p>The best restaurants at the best price</p>
+                        <form action="#">
+                            <div class="search-line row m-0 p-0">
+                                <div class="col-10 p-0">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" autocomplete="off" placeholder="Search for restaurants...">
+                                    </div>                           
+                                </div>
+                                <div class="col-2 p-0 align-self-center">
+                                    <button type="submit">Search</button>
+                                </div> 
+                            </div>
+                            <div class="mobile-submit-btn row p-0 mt-3">
+                                <button type="submit">Search</button>
+                            </div>
+                        </form>
+                        <div class="search-trendings">
+                            <h4 class="d-inline-block">Trending: </h5>
+                            <ul class="list-group d-inline-block">
+                                <li class="list-group-item d-inline-block p-0"><a href="#">Sushi, </a></li>
+                                <li class="list-group-item d-inline-block p-0"><a href="#">Burgher, </a></li>
+                                <li class="list-group-item d-inline-block p-0"><a href="#">Chinese, </a></li>
+                                <li class="list-group-item d-inline-block p-0"><a href="#">Pizza</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="waves" style="background-image: url(./assets/images/wave_white.svg);"></div>
+        </div>
+    </main>
+
+    <!-- POPULAR CATEGORIES -->
+    <section class="popular-categories my-5">
+        <div class="container">
+            <div class="main-title d-flex flex-column align-items-center">
+                <span class="main-line"><span></span></span>
+                <h2>Popular Categories</h2>
+                <p>These meals are incredible!</p>
+            </div>
+            <div class="owl-carousel owl-theme owl-drag owl-loaded mt-4">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage">
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>98</span>
+                                <img src="./assets/images/pizza.jpg" alt="">
+                                <div class="info">
+                                    <h3>Pizza</h3>
+                                    <small>Avg price $40</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>87</span>
+                                <img src="./assets/images/sushi.jpg" alt="">
+                                <div class="info">
+                                    <h3>Japanese</h3>
+                                    <small>Avg price $50</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>55</span>
+                                <img src="./assets/images/burgher.jpg" alt="">
+                                <div class="info">
+                                    <h3>Burghers</h3>
+                                    <small>Avg price $55</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>55</span>
+                                <img src="./assets/images/vegeterian.jpg" alt="">
+                                <div class="info">
+                                    <h3>Vegetarian</h3>
+                                    <small>Avg price $40</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>65</span>
+                                <img src="./assets/images/bakery.jpg" alt="">
+                                <div class="info">
+                                    <h3>Bakery</h3>
+                                    <small>Avg price $60</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>25</span>
+                                <img src="./assets/images/chinese.jpg" alt="">
+                                <div class="info">
+                                    <h3>Chinese</h3>
+                                    <small>Avg price $40</small>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="owl-item">
+                            <a href="#">
+                                <span>35</span>
+                                <img src="./assets/images/mexican.jpg" alt="">
+                                <div class="info">
+                                    <h3>Mexican</h3>
+                                    <small>Avg price $35</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP RATED RESTAURANTS -->
+    <section class="top-rated">
+        <div class="container">
+            <div class="main-title d-flex flex-column">
+                <span class="main-line"><span></span></span>
+                <h2 class="mt-4">Top Rated Restaurants</h2>
+                <p>Check out our customer's favourite restaurants!</p>
+                <a href="restaurants.html">View All →</a>
+            </div>
+            <div class="row">
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_1.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Italian</i>
+                                    <span class="rate d-inline-block">9.5</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">La Monnalisa</h3>
+                                    <span class="address d-inline-block mb-2">8 Patriot Square E2 9NF</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-30%</span>
+                                        <span class="price">Average price $35</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_4.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Vegetarian</i>
+                                    <span class="rate d-inline-block">9.5</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Mr. Pepper</h3>
+                                    <span class="address d-inline-block mb-2">27 Old Gloucester St, 4563</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-30%</span>
+                                        <span class="price">Average price $20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_2.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Mexican</i>
+                                    <span class="rate d-inline-block">8.0</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Alliance</h3>
+                                    <span class="address d-inline-block mb-2">27 Old Gloucester St, 4563</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-40%</span>
+                                        <span class="price">Average price $30</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_5.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Chinese</i>
+                                    <span class="rate d-inline-block">8.0</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Dragon Tower</h3>
+                                    <span class="address d-inline-block mb-2">27 Old Gloucester St, 4563</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-50%</span>
+                                        <span class="price">Average price $35</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_3.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Sushi - Japanese</i>
+                                    <span class="rate d-inline-block">9.0</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Sushi Gold</h3>
+                                    <span class="address d-inline-block mb-2">27 Old Gloucester St, 4563</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-25%</span>
+                                        <span class="price">Average price $20</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="restaurant col-xl-6 col-md-12 my-3">
+                        <a href="#" class="d-flex">
+                            <div class="img-container col-4 me-4">
+                                <img src="./assets/images/location_list_6.jpg" alt="">
+                            </div>
+                            <div class="flex-column col-7 align-self-center">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <i>Pizza - Italian</i>
+                                    <span class="rate d-inline-block">9.8</span>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Bella Napoli</h3>
+                                    <span class="address d-inline-block mb-2">27 Old Gloucester St, 4563</span>
+                                    <div>
+                                        <span class="discount d-inline-block">-45%</span>
+                                        <span class="price">Average price $25</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DELIVERY BANNER -->
+    <section class="delivery my-5">
+        <div class="container">
+            <div class="banner d-flex" style="background-image: url(./assets/images/banner_bg_desktop.jpg);">
+                <div class="info-wrapper col-11">
+                    <span class="d-inline-block">FOOYES DELIVERY</span>
+                    <h3>We Deliver to your Office</h3>
+                    <p>Enjoy a tasty food in minutes!</p>
+                    <a href="restaurants.html">Start Now!</a>
+                </div>
+            </div>  
+        </div>
+
+    </section>
+
+    <!-- START ORDERING -->
+    <section class="start-ordering">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="box">
+                                <div>
+                                    <img src="./assets/images/how_1.svg">
+                                </div>
+                                <h3>Easy Order</h3>
+                                <p>Faucibus ante, in porttitor tellus blandit et. Phasellus tincidunt metus lectus sollicitudin.</p>
+                            </div>
+                            <div class="box">
+                                <div>
+                                    <img src="./assets/images/how_2.svg">
+                                </div>
+                                <h3>Quick Delivery</h3>
+                                <p>Maecenas pulvinar, risus in facilisis dignissim, quam nisi hendrerit nulla, id vestibulum.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 align-self-center">
+                            <div class="box">
+                                <div>
+                                    <img src="./assets/images/how_3.svg">
+                                </div>
+                                <h3>Enjoy Food</h3>
+                                <p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 offset-1 align-self-center">
+                    <div class="main-title d-flex flex-column m-0">
+                        <span class="main-line"><span></span></span>
+                        <h2 class="my-4">Start Ordering Now</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet libero id nisi euismod, sed porta est consectetur deserunt.</p>
+                        <p class="my-4">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <a>Register</a>
+                    </div>
+                </div>
+                <a class="register-now">Register Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="waves" style="background-image: url(./assets/images/wave_white.svg);"></div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Quick Links</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Home</a></li>
+                        <li class="list-group-item"><a href="#">Restaurants</a></li>
+                        <li class="list-group-item"><a href="#">Work with us</a></li>
+                        <li class="list-group-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Categories</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Top Categories</a></li>
+                        <li class="list-group-item"><a href="#">Best Rated</a></li>
+                        <li class="list-group-item"><a href="#">Best Price</a></li>
+                        <li class="list-group-item"><a href="#">Latest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Contacts</h3>
+                    <ul class="footer-list list-group">
+                        <li class="icon house list-group-item">97845 Baker st. 567<br>Los Angeles - US</li>
+                        <li class="icon phone list-group-item">+94 423-23-221</li>
+                        <li class="icon mail list-group-item">info@domain.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Keep in touch</h3>
+                    <form action="" method="post" class="footer-list">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button type="submit">
+                                <i class='fas fa-angle-right'></i>
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./node_modules/rangeslider.js/dist/rangeslider.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

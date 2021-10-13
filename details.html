@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>FooYes - Delivery or Takeaway Food</title>
+</head>
+<body>
+        <!-- ADD TO CARD MODAL -->
+        <div class="modal-wrapper col-lg-4 col-md-6 col-sm-10">
+            <div id="modal" class="modal food-modal" style="z-index: 10001;">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h4 class="modal-title">Cheese Quesadilla</h4>
+                    <button type="button" class="modal-close-btn">x</button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="mb-1">Quantity</h5>
+                        <div class="quantity-row d-flex justify-content-between align-items-center mb-4">
+                            <i class="quantity-minus fas fa-minus"></i>
+                            <input class="quantity-input" type="text" value="0">
+                            <i class="quantity-plus fas fa-plus"></i>
+                        </div>
+                        <h5 class="mb-1">Size</h5>
+                        <ul class="custom-radio-box list-group pb-3 flex-column">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="size">
+                                    <input id="medium" class="d-none" type="radio" name="size">
+                                    <span class="checked d-inline-block"></span>
+                                    <label for="medium" name="size">Medium</label>
+                                </div>
+                                <div class="price-per-size">
+                                    <span>+ $3.30</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="size">
+                                    <input id="large" class="d-none" type="radio" name="size">
+                                    <span class="checked d-inline-block"></span>
+                                    <label for="large" name="size">Large</label>
+                                </div>
+                                <div class="price-per-size">
+                                    <span>+ $3.30</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <div class="size">
+                                    <input id="extra-large" class="d-none" type="radio" name="size">
+                                    <span class="checked d-inline-block"></span>
+                                    <label for="extra-large" name="size">Extra Large</label>
+                                </div>
+                                <div class="price-per-size">
+                                    <span>+ $3.30</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-4">
+                            <button type="button" class="modal-cancel-btn">Cancel</button>
+                        </div>
+                        <div class="col-md-8">
+                            <button type="button" class="add-to-cart-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div id="food-modal-overlay" style="background-color: rgba(0, 0, 0, 0.4); z-index: 4000;"></div>
+        </div>
+
+    <!-- VIEW RESTAURANT PHOTOS -->
+        <div class="vrp-wrapper px-3 d-flex justify-content-between">
+            <button class="left-arrow align-self-center">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="img-container vrp-image align-self-center">
+                <img class="restaurant-img" src="./assets/images/detail_1.jpg" alt="">
+                <img class="restaurant-img" src="./assets/images/detail_2.jpg" alt="">
+                <img class="restaurant-img" src="./assets/images/detail_3.jpg" alt="">
+            </div>
+            <button class="right-arrow align-self-center">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+
+    <!-- HEADER -->
+    <header class="white-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.svg" alt="FooYes header logo">
+                    </a>
+                    <i class="close-mobile-menu fas fa-times"></i>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html">Home</a></li>
+                    <li class="list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" class="default-logo" alt="FooYes header logo">
+                    <img src="./assets/images/logo_sticky.svg" class="colored-logo" alt="FooYes header colorful logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="list-group flex-row align-items-center">
+                    <li class="nav-link list-group-item"><a href="index.html">Home</a></li>
+                    <li class="nav-link list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="nav-link list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="nav-link list-group-item"><a href="contact.html">Contact</a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/login.svg" class="default-icon" alt="sign in icon">
+                        <img src="./assets/images/login_black.svg" class="colored-icon" alt="sign in icon">
+                    </a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/passion.svg" class="default-icon" alt="favourites icon">
+                        <img src="./assets/images/passion_black.svg" class="colored-icon" alt="favourites icon">
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="details hero-section" style="background-image: url(./assets/images/hero_general.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 align-self-end">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="rate d-inline-block">8.9</span>
+                                <div class="review ms-2">
+                                    <span class="d-block">Super</span>
+                                    <em class="d-block">350 Reviews</em>
+                                </div>
+                            </div>
+                            <h1>Pizzeria da Alfredo</h1>
+                            <span>ITALIAN - 27 Old Gloucester St, 4530</span>
+                    </div>
+                    <div class="col-7 mt-3 d-flex align-self-end justify-content-end">
+                            <span class="gallery me-1 d-inline-block">
+                                <i class="fas fa-image"></i>
+                                <a href="#" class="show-photos">View photos</a>
+                            </span>
+                            <span class="wishlist d-inline-block">
+                                <i class="fas fa-heart pe-1"></i>
+                                <a href="#">Wishlist</a>
+                            </span>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- MENU NAVIGATION -->
+    <section class="menu-nav">
+        <div class="container">
+            <div class="row">
+                <ul class="list-group flex-row">
+                    <li class="list-group-item"><a class="nav-link" href="#starters">Starters</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="#main-courses">Main Courses</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="#desserts">Desserts</a></li>
+                    <li class="list-group-item"><a class="nav-link" href="#drinks">Drinks</a></li>
+                    <li class="list-group-item">
+                        <a class="nav-link" href="#reviews">
+                            <i class="nav-link fas fa-comments"></i>
+                            Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div id="starters" class="observe-item starters my-5">
+                        <h2>Starters</h2>
+                        <div class="row">
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>1. Mexican Enchiladas</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-1.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>2. Fajitas</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-2.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>3. Royal Fajitas</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-3.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>4. Chicken Enchilada Wrap</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-4.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="main-courses" class="observe-item main-courses my-5">
+                        <h2>Main Courses</h2>
+                        <div class="row">
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>1. Cheese Quesadilla</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-5.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>2. Chorizo & Cheese</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-6.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>3. Beef Taco</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-7.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>4. Minced Beef Double Layer</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-8.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>5. Piri Piri Chicken</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-9.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>6. Burrito Al Pastar</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-10.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="desserts" class="show-food-modal observe-item desserts my-5">
+                        <h2>Desserts</h2>
+                        <div class="row">
+                            <div class="col-6 my-3">
+                                <a href="#" class="d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>1. Cheese Quesadilla</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-5.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>2. Chorizo & Cheese</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-6.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>3. Beef Taco</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-7.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>4. Minced Beef Double Layer</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-8.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>5. Piri Piri Chicken</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-9.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>6. Burrito Al Pastar</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-10.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="drinks" class="observe-item drinks my-5">
+                        <h2>Drinks</h2>
+                        <div class="row">
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>1. Coca Cola</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-5.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>2. Corona Beer</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-6.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>3. Red Wine</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-7.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>4. White Wine</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-8.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>5. Mineral Water</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-9.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 my-3">
+                                <a href="#" class="show-food-modal d-flex justify-content-between">
+                                    <div class="food-info">
+                                        <h3>6. Red Bull</h3>
+                                        <p class="mb-2">Fuisset mentitum deleniti sit ea.</p>
+                                        <strong>$9.40</strong>
+                                    </div>
+                                    <div class="food-pic">
+                                        <img src="./assets/images/menu-thumb-10.jpg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-basket-btn">
+                    <button>View Basket</button>
+                </div>
+                <div class="sidebar col-4 mt-5">
+                    <div class="order-header">
+                        <h3>Order Summary</h3>
+                        <i class="close-mobile-menu fas fa-times"></i>
+                    </div>
+                    <div class="order-body p-3">
+                        <div class="order-list">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <a href="#" class="d-inline-block">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <span>1x Enchiladas</span>
+                                    </a>
+                                    <span class="d-inline-block">$11</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <a href="#" class="d-inline-block">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <span>2x Cheese Cake</span>
+                                    </a>
+                                    <span class="d-inline-block">$11</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <a href="#" class="d-inline-block">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <span>2x Burrito</span>
+                                    </a>
+                                    <span class="d-inline-block">$14</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <a href="#" class="d-inline-block">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <span>1x Chicken</span>
+                                    </a>
+                                    <span class="d-inline-block">$18</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <a href="#" class="d-inline-block">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <span>2x Corona Beer</span>
+                                    </a>
+                                    <span class="d-inline-block">$9</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="charges mt-3">
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span class="d-inline-block">Subtotal</span>
+                                    <span class="d-inline-block">$56</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span class="d-inline-block">Delivery fee</span>
+                                    <span class="d-inline-block">$10</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span class="d-inline-block">TOTAL</span>
+                                    <span class="d-inline-block">$66</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="delivery-type">
+                            <ul class="custom-radio-box list-group pb-3 flex-row">
+                                <li class="list-group-item col-6">
+                                    <input id="delivery" class="d-none" type="radio" name="delivery-type">
+                                    <span class="checked d-inline-block"></span>
+                                    <label for="delivery" name="delivery-type">Delivery</label>
+                                </li>
+                                <li class="list-group-item col-6">
+                                    <input id="take-away" class="d-none" type="radio" name="delivery-type">
+                                    <span class="checked d-inline-block"></span>
+                                    <label for="take-away" name="delivery-type">Take Away</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="choose-delivery-day mt-3">
+                            <div class="delivery-day d-flex justify-content-between">
+                                <p>
+                                    <span class="d-inline-block">Day</span>
+                                    <span class="selected-day d-inline-block"></span>
+                                </p>
+                                <span class="d-inline-block calendar"><i class="far fa-calendar"></i></span>
+                            </div>
+                            <div class="choose-day">
+                                <h4>Which day delivered?</h4>
+                                <ul class="custom-radio-box list-group flex-row justify-content-center">
+                                    <li class="list-group-item col-6">
+                                        <input class="d-none" type="radio" id="today" name="delivery-day" value="Today">
+                                        <label class="chosen-day" for="today">Today</label>
+                                    </li>
+                                    <li class="list-group-item col-6">
+                                        <input class="d-none" type="radio" id="tomorrow" name="delivery-day" value="Tomorrow">
+                                        <label class="chosen-day" for="tomorrow">Tomorrow</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="choose-delivery-time mt-2">
+                            <div class="delivery-time d-flex justify-content-between">
+                                <p>
+                                    <span class="d-inline-block">Time</span>
+                                    <span class="selected-time d-inline-block"></span>
+                                </p>
+                                <span class="d-inline-block clock"><i class="far fa-clock"></i></span>
+                            </div>
+                            <div class="choose-time">
+                                <h4>Lunch</h4>
+                                <ul class="list-group flex-row justify-content-center">
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-1" name="delivery-time" value="12.00">
+                                        <label class="chosen-time" for="time-1">12.00</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-2" name="delivery-time" value="12.30">
+                                        <label class="chosen-time" for="time-2">12.30</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-3" name="delivery-time" value="13.00">
+                                        <label class="chosen-time" for="time-3">13.00</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-4" name="delivery-time" value="13.30">
+                                        <label class="chosen-time" for="time-4">13.30</label>
+                                    </li>
+                                </ul>
+                                <h4 class="mt-2">Dinner</h4>
+                                <ul class="list-group flex-row justify-content-center">
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-5" name="delivery-time" value="20.00">
+                                        <label class="chosen-time" for="time-5">20.00</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-6" name="delivery-time" value="20.30">
+                                        <label class="chosen-time" for="time-6">20.30</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-7" name="delivery-time" value="21.00">
+                                        <label class="chosen-time" for="time-7">21.00</label>
+                                    </li>
+                                    <li class="list-group-item col-3">
+                                        <input class="d-none" type="radio" id="time-8" name="delivery-time" value="21.30">
+                                        <label class="chosen-time" for="time-8">21.30</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="order-btn mt-4">
+                            <button type="submit">Order Now</button>
+                            <div class="m-0 p-0">
+                                <small>No money charged on this steps</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section id="reviews" class="reviews-section my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                   <h2>Reviews</h2> 
+                   <div class="rate-section row">
+                       <div class="col-3 px-3 py-0 mt-2">
+                            <div class="rating py-4 d-flex flex-column align-items-center">
+                                <span class="p-0 m-0">8.9</span>
+                                <span class="p-0 m-0">Super</span>
+                                <small>Based on 4 reviews</small>
+                            </div> 
+                       </div>
+                       <div class="col-9 align-self-center">
+                           <div class="row">
+                               <div class="rating-sum col-6">
+                                <h5>Food Quality</h5>
+                                <div class="row align-items-center">
+                                    <div class="col-9">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                          </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <span>9.0</span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="rating-sum col-6">
+                                    <h5>Punctuality</h5>
+                                    <div class="row align-items-center">
+                                        <div class="col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span>9.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating-sum col-6">
+                                    <h5>Service</h5>
+                                    <div class="row align-items-center">
+                                        <div class="col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span>9.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating-sum col-6">
+                                    <h5>Price</h5>
+                                    <div class="row align-items-center">
+                                        <div class="col-9">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span>9.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="reviews mt-4">
+                       <div class="review py-4 mb-4">
+                           <div class="row">
+                               <div class="user-info mb-2 col-2 d-flex flex-column align-items-center">
+                                   <div class="img-container mb-3">
+                                        <img src="./assets/images/avatar.jpg" alt="">
+                                    </div>
+                                    <h5>Lukas</h5>
+                               </div>
+                               <div class="col-10">
+                                   <div class="rating-avg d-flex justify-content-between">
+                                    <div>
+                                        <span>8.5</span>
+                                        <small>/10</small> 
+                                        <small>Rating average</small>
+                                    </div>
+                                    <div>
+                                        <em>Published 54 minutes ago</em>
+                                    </div>
+                                   </div>
+                                   <div class="review-text">
+                                        <h3 class="my-2">"Great Location!!"</h3>
+                                        <p>Eos tollit ancillae ea, lorem consulatu qui ne, eu eros eirmod scaevola sea. Et nec tantas accusamus salutatus, sit commodo veritus te, erat legere fabulas has ut. Rebum laudem cum ea, ius essent fuisset ut. Viderer petentium cu his. Tollit molestie suscipiantur his et.</p>
+                                   </div>
+                                   <div class="buttons mt-5">
+                                       <a href="#" class="d-inline-block">
+                                           <span>0</span>
+                                           <i class="far fa-thumbs-up"></i>
+                                           <span>Useful</span>
+                                       </a>
+                                       <a href="#" class="d-inline-block">
+                                        <span>0</span>
+                                        <i class="far fa-thumbs-down"></i>
+                                        <span> Not useful</span>
+                                    </a>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="review py-4 mb-4">
+                        <div class="row">
+                            <div class="user-info mb-2 col-2 d-flex flex-column align-items-center">
+                                <div class="img-container mb-3">
+                                     <img src="./assets/images/avatar.jpg" alt="">
+                                 </div>
+                                 <h5>Monika</h5>
+                            </div>
+                            <div class="col-10">
+                                <div class="rating-avg d-flex justify-content-between">
+                                 <div>
+                                     <span>9.5</span>
+                                     <small>/10</small> 
+                                     <small>Rating average</small>
+                                 </div>
+                                 <div>
+                                     <em>Published 11 Oct, 2019</em>
+                                 </div>
+                                </div>
+                                <div class="review-text">
+                                     <h3 class="my-2">"Really great dinner!!"</h3>
+                                     <p>Eos tollit ancillae ea, lorem consulatu qui ne, eu eros eirmod scaevola sea. Et nec tantas accusamus salutatus, sit commodo veritus te, erat legere fabulas has ut. Rebum laudem cum ea, ius essent fuisset ut. Viderer petentium cu his. Tollit molestie suscipiantur his et.</p>
+                                </div>
+                                <div class="buttons mt-5">
+                                    <a href="#" class="d-inline-block">
+                                        <span>0</span>
+                                        <i class="far fa-thumbs-up"></i>
+                                        <span>Useful</span>
+                                    </a>
+                                    <a href="#" class="d-inline-block">
+                                     <span>0</span>
+                                     <i class="far fa-thumbs-down"></i>
+                                     <span> Not useful</span>
+                                 </a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                   </div>
+                   <div class="leave-review-btn d-flex justify-content-end">
+                       <a href="leave-review.html">Leave a Review</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="waves" style="background-image: url(./assets/images/wave_white.svg);"></div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Quick Links</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Home</a></li>
+                        <li class="list-group-item"><a href="#">Restaurants</a></li>
+                        <li class="list-group-item"><a href="#">Work with us</a></li>
+                        <li class="list-group-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Categories</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Top Categories</a></li>
+                        <li class="list-group-item"><a href="#">Best Rated</a></li>
+                        <li class="list-group-item"><a href="#">Best Price</a></li>
+                        <li class="list-group-item"><a href="#">Latest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Contacts</h3>
+                    <ul class="footer-list list-group">
+                        <li class="icon house list-group-item">97845 Baker st. 567<br>Los Angeles - US</li>
+                        <li class="icon phone list-group-item">+94 423-23-221</li>
+                        <li class="icon mail list-group-item">info@domain.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Keep in touch</h3>
+                    <form action="" method="post" class="footer-list">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button type="submit">
+                                <i class='fas fa-angle-right'></i>
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

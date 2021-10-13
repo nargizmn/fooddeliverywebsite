@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>FooYes - Delivery or Takeaway Food</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="white-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.svg" alt="FooYes header logo">
+                    </a>
+                    <i class="close-mobile-menu fas fa-times"></i>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html">Home</a></li>
+                    <li class="list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" class="default-logo" alt="FooYes header logo">
+                    <img src="./assets/images/logo_sticky.svg" class="colored-logo" alt="FooYes header colorful logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="list-group flex-row align-items-center">
+                    <li class="nav-link list-group-item"><a href="index.html">Home</a></li>
+                    <li class="nav-link list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="nav-link list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="nav-link list-group-item"><a href="contact.html">Contact</a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/login.svg" class="default-icon" alt="sign in icon">
+                        <img src="./assets/images/login_black.svg" class="colored-icon" alt="sign in icon">
+                    </a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/passion.svg" class="default-icon" alt="favourites icon">
+                        <img src="./assets/images/passion_black.svg" class="colored-icon" alt="favourites icon">
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEARCH LINE -->
+    <main class="restaurants-main mb-5">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="search-line col-xl-4 col-lg-6 col-md-6 col-sm-6 p-0">
+                    <input type="text" class="form-control" placeholder="Dishes, restaurants or cuisines">
+                    <button type="submit"><i class="fas fa-search fa-flip-horizontal"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FILTER SECTION -->
+    <section class="filter mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="sidebar col-3">
+                    <div class="delivery-type">
+                        <ul class="custom-radio-box list-group pb-3">
+                            <li class="list-group-item pt-0">
+                                <input id="delivery" class="d-none" type="radio" name="delivery-type" checked>
+                                <span class="checked d-inline-block"></span>
+                                <label for="delivery" name="delivery-type">Delivery</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input id="take-away" class="d-none" type="radio" name="delivery-type">
+                                <span class="checked d-inline-block"></span>
+                                <label for="take-away" name="delivery-type">Take Away</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="adjust-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <div class="filter-section">
+                        <div class="mobile-filter-header">
+                            <span class="d-inline-block">Filters</span>
+                            <i class="close-mobile-menu fas fa-times"></i>
+                        </div>
+                        <div class="sort">
+                            <div class="sort-header d-flex justify-content-between">
+                                <h4 class="d-inline-block" href="#">Sort</h4>
+                                <span class="sort-icon d-inline-block"><i class="fas fa-chevron-up"></i></span>
+                            </div>
+                            <div class="sort-list pb-3">
+                                <ul class="custom-radio-box list-group">
+                                    <li class="list-group-item pt-0">
+                                        <input id="top-rated" class="d-none" type="radio" name="sort" checked>
+                                        <span class="checked d-inline-block"></span>
+                                        <label for="top-rated" name="sort">Top rated</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input id="recommended" class="d-none" type="radio" name="sort">
+                                        <span class="checked d-inline-block"></span>
+                                        <label for="recommended" name="sort">Recommended</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input id="low-to-high" class="d-none" type="radio" name="sort">
+                                        <span class="checked d-inline-block"></span>
+                                        <label for="low-to-high" name="sort">Price: low to high</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input id="up-to-15" class="d-none" type="radio" name="sort">
+                                        <span class="checked d-inline-block"></span>
+                                        <label for="up-to-15" name="sort">Up to 15% off</label>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <input id="all-offers" class="d-none" type="radio" name="sort">
+                                        <span class="checked d-inline-block"></span>
+                                        <label for="all-offers" name="sort">All offers</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="category-filter">
+                            <div class="category-header d-flex justify-content-between">
+                                <h4 class="d-inline-block" href="#">Categories</h4>
+                                <span class="category-icon d-inline-block rotated"><i class="fas fa-chevron-up"></i></span>
+                            </div>
+                            <div class="category-list pb-3">
+                                <ul class="custom-select-list list-group">
+                                    <li class="list-group-item pt-0 d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-pizza">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-pizza">Pizza - Italian</label>
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-japan">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-japan">Japanese - Sushi</label> 
+                                        </div>
+                                        <div>
+                                             <small>12</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-burgher">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-burgher">Burghers</label>
+                                        </div>
+                                        <div>
+                                           <small>12</small> 
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-veg">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-veg">Vegetarian</label> 
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>                                
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-chinese">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-chinese">Chinese</label>
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>     
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-mexican">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-mexican">Mexican</label>
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rest-bakery">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rest-bakery">Bakery</label> 
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <div class="rating-header d-flex justify-content-between">
+                                <h4 class="d-inline-block" href="#">Rating</h4>
+                                <span class="rating-icon rotated d-inline-block"><i class="fas fa-chevron-up"></i></span>
+                            </div>
+                            <div class="rating-list pb-3">
+                                <ul class="custom-select-list list-group pb-3">
+                                    <li class="list-group-item pt-0 d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rate-super">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rate-super">Super 9+</label>
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rate-very-good">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rate-very-good">Very Good 8+</label> 
+                                        </div>
+                                        <div>
+                                            <small>12</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rate-good">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rate-good">Good 7+</label>
+                                        </div>
+                                        <div>
+                                           <small>12</small> 
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>
+                                            <input class="d-none" type="checkbox" id="rate-pleasant">
+                                            <span class="d-inline-block checked"></span>
+                                            <label for="rate-pleasant">Pleasant 6+</label>
+                                        </div>
+                                        <div>
+                                          <small>12</small>  
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filter-btn my-4">
+                            <a class="w-100" href="#">Filter</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="container">
+                        <div class="row">
+                            <div class="top-categories">
+                                <h2>Top Categories</h2>
+                                <div class="owl-carousel owl-theme owl-drag owl-loaded mt-4">
+                                    <div class="owl-stage-outer">
+                                        <div class="owl-stage">
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_1.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Pizza</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_2.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Sushi</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_3.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Dessert</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_4.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Hamburgher</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_5.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Ice Cream</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_6.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Kebab</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_7.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Italian</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="owl-item">
+                                                <a href="#">
+                                                    <img src="./assets/images/cat_listing_8.jpg" alt="">
+                                                    <div class="info pb-1">
+                                                        <h3>Chinese</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filtered-items mt-5">
+                                <h2>Top Rated</h2>
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_1.jpg" alt="">
+                                                <small class="cat-name">Pizza</small>
+                                                <span class="discount d-inline-block">15% off</span>
+                                                <div class="rest-title">
+                                                    <h3>Da Alfredo</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">9.5</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_2.jpg" alt="">
+                                                <small class="cat-name">Burghers</small>
+                                                <div class="rest-title">
+                                                    <h3>Best Burghers</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 no">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">9.5</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_3.jpg" alt="">
+                                                <small class="cat-name">Vegetarian</small>
+                                                <span class="discount d-inline-block">15% off</span>
+                                                <div class="rest-title">
+                                                    <h3>Vego Life</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block no">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">7.5</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_4.jpg" alt="">
+                                                <small class="cat-name">Japanese</small>
+                                                <div class="rest-title">
+                                                    <h3>Sushi Temple</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 no">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">9.5</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_5.jpg" alt="">
+                                                <small class="cat-name">Pizza</small>
+                                                <div class="rest-title">
+                                                    <h3>Auto Pizza</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block no">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">7.0</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_6.jpg" alt="">
+                                                <small class="cat-name">Burghers</small>
+                                                <div class="rest-title">
+                                                    <h3>Alliance</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 no">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">8.0</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_7.jpg" alt="">
+                                                <small class="cat-name">Chinese</small>
+                                                <div class="rest-title">
+                                                    <h3>Alliance</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 no">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">7.9</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_8.jpg" alt="">
+                                                <small class="cat-name">Sushi</small>
+                                                <div class="rest-title">
+                                                    <h3>Dragon Tower</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 ">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block no">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">8.9</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_9.jpg" alt="">
+                                                <small class="cat-name">Mexican</small>
+                                                <div class="rest-title">
+                                                    <h3>El Paso Tacos</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 ">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">8.9</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_10.jpg" alt="">
+                                                <small class="cat-name">Bakery</small>
+                                                <div class="rest-title">
+                                                    <h3>Monnalisa</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 ">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">9.3</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_11.jpg" alt="">
+                                                <small class="cat-name">Mexican</small>
+                                                <div class="rest-title">
+                                                    <h3>Guachamole</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 ">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">8.5</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 mb-4">
+                                        <div class="card p-0">
+                                            <a href="#">
+                                                <img src="./assets/images/location_12.jpg" alt="">
+                                                <small class="cat-name">Chinese</small>
+                                                <div class="rest-title">
+                                                    <h3>Pechino Express</h3>
+                                                    <small>27 Old Gloucester St</small>
+                                                </div>
+                                            </a>  
+                                        </div>
+                                        <div class="delivery-icons">
+                                            <ul class="list-group flex-row justify-content-between align-items-center">
+                                                <li class="list-group-item ps-0">
+                                                    <div class="text-center">
+                                                        <img src="./assets/images/lunch-bag.png" alt="">
+                                                        <span class="d-inline-block me-2 no">Takeaway</span>
+                                                        <img src="./assets/images/delivery.svg" alt="">
+                                                        <span class="d-inline-block">Delivery</span>
+                                                    </div>
+                                                </li>
+                                                <li class="list-group-item pe-0">
+                                                    <span class="rate d-inline-block">8.9</span>
+                                                </li>
+                                            </ul>
+                                        </div>             
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                              <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">4</a></li>
+                              <li class="page-item"><a class="page-link" href="#">5</a></li>
+                              <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="waves" style="background-image: url(./assets/images/wave_white.svg);"></div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Quick Links</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Home</a></li>
+                        <li class="list-group-item"><a href="#">Restaurants</a></li>
+                        <li class="list-group-item"><a href="#">Work with us</a></li>
+                        <li class="list-group-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Categories</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Top Categories</a></li>
+                        <li class="list-group-item"><a href="#">Best Rated</a></li>
+                        <li class="list-group-item"><a href="#">Best Price</a></li>
+                        <li class="list-group-item"><a href="#">Latest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Contacts</h3>
+                    <ul class="footer-list list-group">
+                        <li class="icon house list-group-item">97845 Baker st. 567<br>Los Angeles - US</li>
+                        <li class="icon phone list-group-item">+94 423-23-221</li>
+                        <li class="icon mail list-group-item">info@domain.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Keep in touch</h3>
+                    <form action="" method="post" class="footer-list">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button type="submit">
+                                <i class='fas fa-angle-right'></i>
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

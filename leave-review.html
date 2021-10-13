@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>FooYes - Delivery or Takeaway Food</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="white-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <a href="index.html">
+                        <img src="./assets/images/logo.svg" alt="FooYes header logo">
+                    </a>
+                    <i class="close-mobile-menu fas fa-times"></i>
+                </div>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="index.html">Home</a></li>
+                    <li class="list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="list-group-item"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" class="default-logo" alt="FooYes header logo">
+                    <img src="./assets/images/logo_sticky.svg" class="colored-logo" alt="FooYes header colorful logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="list-group flex-row align-items-center">
+                    <li class="nav-link list-group-item"><a href="index.html">Home</a></li>
+                    <li class="nav-link list-group-item"><a href="restaurants.html">Restaurants</a></li>
+                    <li class="nav-link list-group-item"><a href="work-with-us.html">Work with us</a></li>
+                    <li class="nav-link list-group-item"><a href="contact.html">Contact</a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/login.svg" class="default-icon" alt="sign in icon">
+                        <img src="./assets/images/login_black.svg" class="colored-icon" alt="sign in icon">
+                    </a></li>
+                    <li class="list-group-item pb-0"><a href="">
+                        <img src="./assets/images/passion.svg" class="default-icon" alt="favourites icon">
+                        <img src="./assets/images/passion_black.svg" class="colored-icon" alt="favourites icon">
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="leave-review">
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="box p-4">
+                        <h1>Write a review for "Pizzeria Da Alfredo"</h1>
+                        <span>Overall rating</span>
+                        <div class="row">
+                            <div class="col-md-3 pb-4">
+                                <label for="food-quality">Food Quality</label>
+                                <span class="food-quality-val">0</span>
+                                <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="food-quality" name="food-quality">
+                            </div>
+                            <div class="col-md-3 pb-4">
+                                <label for="service">Service</label>
+                                <span class="service-val">0</span>
+                                <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="service" name="service">
+                            </div>
+                            <div class="col-md-3 pb-4">
+                                <label for="punctuality">Punctuality</label>
+                                <span class="punctuality-val">0</span>
+                                <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="punctuality" name="punctuality">
+                            </div>
+                            <div class="col-md-3 pb-4">
+                                <label for="price">Price</label>
+                                <span class="price-val">0</span>
+                                <input type="range" min="0" max="10" step="1" value="0" data-orientation="horizontal" id="price" name="price">
+                            </div>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="form-group mb-3">
+                                <label for="review-title">Title of your review</label>
+                                <input id="review-title" class="form-control d-block" type="text" placeholder="If you could say it in one sentence, what would you say?">
+                            </div>
+                            <div class="form-group">
+                                <label for="review">Your review</label>
+                                <textarea id="review" class="form-control d-block" style="height: 180px;" placeholder="Write your review to help others learn about this online business"></textarea>
+                            </div>
+                            <button type="submit" class="mt-4">Submit review</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="waves" style="background-image: url(./assets/images/wave_white.svg);"></div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Quick Links</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Home</a></li>
+                        <li class="list-group-item"><a href="#">Restaurants</a></li>
+                        <li class="list-group-item"><a href="#">Work with us</a></li>
+                        <li class="list-group-item"><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Categories</h3>
+                    <ul class="footer-list list-group">
+                        <li class="list-group-item"><a href="#">Top Categories</a></li>
+                        <li class="list-group-item"><a href="#">Best Rated</a></li>
+                        <li class="list-group-item"><a href="#">Best Price</a></li>
+                        <li class="list-group-item"><a href="#">Latest</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Contacts</h3>
+                    <ul class="footer-list list-group">
+                        <li class="icon house list-group-item">97845 Baker st. 567<br>Los Angeles - US</li>
+                        <li class="icon phone list-group-item">+94 423-23-221</li>
+                        <li class="icon mail list-group-item">info@domain.com</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="footer-header">Keep in touch</h3>
+                    <form action="" method="post" class="footer-list">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button type="submit">
+                                <i class='fas fa-angle-right'></i>
+                            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./node_modules/rangeslider.js/dist/rangeslider.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
